@@ -46,9 +46,10 @@
 	}, false);
 
 	function generatePassword(lower, upper, number, symbol, length) {
-		let generatePassword = '';
+		let newPassword = '';
 		const typeCount = lower + upper + number + symbol;
 		const typeArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+
 
 		if (typeCount === 0) {
 			return '';
@@ -57,11 +58,14 @@
 		for (let i = 0; i < length; i += typeCount) {
 			typeArr.forEach(type => {
 				const funcName = Object.keys(type)[0];
-				generatePassword += randomFunc[funcName]();
+				newPassword += randomFunc[funcName]();
 			});
 		}
 
-		const finalPassword = generatePassword.slice(0, length);
+		console.log(typeof newPassword);
+
+		const finalPassword = newPassword.slice(0, length);
+		console.log(typeof finalPassword);
 		return finalPassword;
 	}
 
@@ -74,7 +78,7 @@
 	}
 
 	function getRandomNumber() {
-		return String.fromCharCode(Math.floor(Math.random() * 26) + 48);
+		return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 	}
 
 	function getRandomSymbol() {
