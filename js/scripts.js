@@ -62,10 +62,7 @@
 			});
 		}
 
-		console.log(typeof newPassword);
-
 		const finalPassword = newPassword.slice(0, length);
-		console.log(typeof finalPassword);
 		return finalPassword;
 	}
 
