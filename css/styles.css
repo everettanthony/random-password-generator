@@ -150,31 +150,58 @@ input[type=range]::-ms-thumb {
   width: 16px;
 }
 
-input[type=checkbox] {
-  margin: 0 8px 8px 0;
-}
-
-input[type=checkbox]:after {
-  background-color: #16c79a;
- 	border-radius: 1px;
-  color: #fff;
-  content: " ";
+.toggle {
   display: inline-block;
+  position: relative;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+	clip: rect(0 0 0 0);
+	color: transparent;
+	display: block;
+	height: 20px;
+	text-indent: -150%;
+	user-select: none;
+	width: 40px;
+}
+
+.toggle-label::before,
+.toggle-label::after {
+  content: "";
+  cursor: pointer;
+  display: block;
+  position: absolute;
+}
+
+.toggle-label::before {
+  -webkit-transition: background-color 0.25s ease;
+  background-color: #11698e;
+  border-radius: 9999em;
+  height: 100%;
+  transition: background-color 0.25s ease;
+  width: 100%;
+}
+
+.toggle-label::after {
+  -webkit-transition: left 0.25s ease;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
   height: 20px;
-  margin-right: 10px;
-	width: 20px;
-  visibility: visible;
+  left: 0;
+  top: 0;
+  transition: left 0.25s ease;
+  width: 20px;
 }
 
-input[type=checkbox]:checked:after {
-  content: "\2714";
-  font-size: 15px;
-  text-align: center;
+.toggle-input:checked + .toggle-label::before {
+  background-color: #16c79a;
 }
 
-
-
-
-
-
-
+.toggle-input:checked + .toggle-label::after {
+  left: 20px;
+}
