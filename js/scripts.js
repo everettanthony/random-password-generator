@@ -7,6 +7,7 @@
 	const symbolsEl = document.getElementById('symbols');
 	const generatorBtn = document.getElementById('generator');
 	const clipboardBtn = document.getElementById('clipboard');
+	const alertEl = document.getElementById('alert');
 	let rangeVal = document.querySelector('.range-val');
 	rangeVal.innerHTML = '(' + lengthEl.value + ')';
 
@@ -28,7 +29,7 @@
 		textarea.select();
 		document.execCommand('copy');
 		textarea.remove();
-		alert('Your password has been copied to the clipboard.');
+		alertUser("Your password has been copied to the clipboard.");
 	});
 
 	generatorBtn.addEventListener('click', function(e) {
@@ -64,6 +65,18 @@
 
 		const finalPassword = newPassword.slice(0, length);
 		return finalPassword;
+	}
+
+	function alertUser(msg) {
+		if (msg) {
+			alertEl.innerHTML = msg;
+		}
+
+		alertEl.classList.add('alert-show');
+
+		setTimeout(function() {
+			alertEl.classList.remove('alert-show');
+		}, 4000);
 	}
 
 	function getRandomLower() {

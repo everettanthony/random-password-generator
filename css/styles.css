@@ -223,3 +223,24 @@ input[type=range]::-ms-thumb {
 .toggle-input:checked + .toggle-label::after {
   left: 20px;
 }
+
+#alert {
+	align-items: center;
+	background-color: #16c79a;
+	border-bottom: 3px solid #12ab84;
+	color: #fff;
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	left: 0;
+	padding: 0 20px;
+	position: fixed;
+	top: 0;
+	transition: transform 400ms ease-in-out;
+	transform: translateY(-50px);
+	width: 100%;
+}
+
+#alert.alert-show {
+	transform: translateY(0);
+}
