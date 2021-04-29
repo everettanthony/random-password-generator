@@ -2,34 +2,17 @@
 	box-sizing: border-box;
 }
 
-html {
-	height: -webkit-fill-available;
-}
-
 body {
+	align-items: center;
 	background-color: #f8f1f1;
 	color: #fff;
+	display: flex;
 	font-family: 'Muli', sans-serif;
 	font-size: 16px;
-	min-height: 100vh;
-	min-height: -webkit-fill-available;
-	margin: 0;
-	overflow-y: hidden;
-	padding: 0 10px;
-}
-
-@media (min-width: 375px) {
-	body {
-		overflow-y: visible;
-	}	
-}
-
-.wrapper {
-	align-items: center;
-	display: flex;
-	height: 100vh;
 	justify-content: center;
-	width: 100%;
+	min-height: 85vh;
+	margin: 0;
+	padding: 0 10px;
 }
 
 .container {
