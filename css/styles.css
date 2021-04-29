@@ -17,6 +17,7 @@ body {
 }
 
 .wrapper {
+	background-color: red;
 	align-items: center;
 	display: flex;
 	height: 90%;
