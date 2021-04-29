@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	align-items: center;
 	background-color: #f8f1f1;
@@ -12,7 +16,7 @@ body {
 	font-size: 16px;
 	justify-content: center;
 	margin: 0;
-	height: 100vh;
+	height: 100%;
 	padding: 10px;
 }
 
