@@ -14,7 +14,14 @@ body {
 	min-height: 100vh;
 	min-height: -webkit-fill-available;
 	margin: 0;
+	overflow-y: hidden;
 	padding: 0 10px;
+}
+
+@media (min-width: 375px) {
+	body {
+		overflow-y: visible;
+	}	
 }
 
 .wrapper {
