@@ -20,7 +20,7 @@ body {
 .wrapper {
 	align-items: center;
 	display: flex;
-	height: 90%;
+	height: 100vh;
 	justify-content: center;
 	width: 100%;
 }
